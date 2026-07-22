@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoTrack AI Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dashboard-page">
+<div class="d-flex">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3 class="text-center text-white mt-3">
+      <i class="fa-solid fa-leaf"></i> EcoTrack AI
+    </h3>
+    <hr class="text-white">
+    <a href="/dashboard"><i class="bi bi-speedometer2"></i> Dashboard</a>
+    <a href="/calculator"><i class="bi bi-calculator"></i> Calculator</a>
+    <a href="/history"><i class="bi bi-clock-history"></i> History</a>
+    <a href="/reports"><i class="bi bi-file-earmark-bar-graph"></i> Reports</a>
+    <a href="/goals"><i class="bi bi-bullseye"></i> Goals</a>
+    <a href="/eco-tips"><i class="bi bi-lightbulb"></i> Eco Tips</a>
+    <a href="/leaderboard"><i class="bi bi-trophy"></i> Leaderboard</a>
+    <a href="/profile"><i class="bi bi-person-circle"></i> Profile</a>
+    <a href="/about"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="/logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+  </div>
+<!-- Main Content -->
+<div class="main-content">
+
+<div class="container-fluid">
+  <!-- Top Navbar -->
+<div class="dashboard-header mb-4">
+
+<nav class="navbar">
+
+<div class="container-fluid d-flex justify-content-between align-items-center">
+
+<h2 class="fw-bold m-0">
+AI Carbon Footprint Dashboard
+</h2>
+
+<div>
+
+<button class="btn btn-success me-2">
+
+<i class="bi bi-person-circle"></i>
+
+{{ username }}
+
+</button>
+
+<button class="btn btn-dark"
+
+onclick="toggleDarkMode()">
+
+<i class="bi bi-moon"></i>
+
+Dark Mode
+
+</button>
+
+</div>
+
+</div>
+
+</nav>
+
+</div>
+      <div class="row g-4">
+
+    <div class="col-lg-3 col-md-6">
+<div class="card dashboard-card card-carbon text-center p-4">         <h6>Today's Carbon Footprint</h6>
+            <h2>{{ total_carbon }} kg CO₂</h2>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card dashboard-card card-category text-center p-4">
+            <h6>Carbon Category</h6>
+
+            {% if total_carbon < 20 %}
+            <h2 class="text-success">Low</h2>
+
+            {% elif total_carbon < 50 %}
+            <h2 class="text-warning">Medium</h2>
+
+            {% else %}
+            <h2 class="text-danger">High</h2>
+
+            {% endif %}
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+        <div class="card dashboard-card card-eco text-center p-4">
+            <h6>Eco Score</h6>
+            <h2>{{ eco_score }}/100</h2>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+      <div class="card dashboard-card card-tree text-center p-4">
+            <h6>Trees You Can Save</h6>
+            <h2>{{ trees_saved }}</h2>
+            <small>trees / year</small>
+        </div>
+    </div>
+
+</div>
+      <div class="row mt-4 g-4">
+
+    <div class="col-lg-8">
+
+<div class="card chart-card p-4 h-100">
+            <h4>Carbon Emission Breakdown</h4>
+
+            <canvas id="pieChart" height="300"></canvas>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-4">
+
+<div class="card action-card p-4 h-100">
+
+<h3 class="fw-bold mb-4">
+Quick Actions
+</h3>
+<a href="/calculator"
+class="btn btn-success w-100 mb-3">                Calculate Carbon
+            </a>
+
+<a href="/reports"
+class="btn btn-primary w-100 mb-3">                View Reports
+            </a>
+
+<a href="/history"
+class="btn btn-dark w-100">                History
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+      <!-- AI Assistant -->
+      <div class="row mt-4">
+        <div class="col-lg-12">
+          <div class="card ai-card p-4">
+            <h4>🤖 AI Eco Assistant</h4>
+            <hr>
+            {% if total_carbon < 20 %}
+              <div class="alert alert-success">
+                Excellent! 🌱 Your carbon footprint is low. Keep using public transport and saving electricity.
+              </div>
+            {% elif total_carbon < 50 %}
+              <div class="alert alert-warning">
+                Good! 👍 Reduce plastic usage and switch to LED bulbs to lower your emissions.
+              </div>
+            {% else %}
+              <div class="alert alert-danger">
+                ⚠️ Your carbon footprint is high. Use public transport, save electricity, recycle waste, and plant more trees.
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row (now properly inside main content) -->
+      <div class="row mt-4">
+        <div class="col-xl-4 col-md-6 mb-4">
+          <div class="card p-4 stats-card text-center">
+            <h4>🌍 Total Records</h4>
+            <h2>{{ total_records }}</h2>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-4">
+          <div class="card p-4 text-center">
+            <h4>🌱 Average Carbon</h4>
+            <h2>{{ average }} kg</h2>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-4">
+          <div class="card p-4 text-center">
+            <h4>⭐ AI Status</h4>
+            {% if total_carbon < 20 %}
+              <h3 class="text-success">Excellent</h3>
+            {% elif total_carbon < 50 %}
+              <h3 class="text-warning">Good</h3>
+            {% else %}
+              <h3 class="text-danger">Needs Improvement</h3>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container-fluid -->
+    <footer class="footer mt-4">
+
+© 2026 EcoTrack AI | All Rights Reserved
+
+</footer>
+  </div><!-- /main-content -->
+</div><!-- /d-flex -->
+
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<script>
+new Chart(document.getElementById("pieChart"), {
+  type: "pie",
+  data: {
+    labels: ["Transport", "Electricity", "Water", "Plastic", "Waste", "Fuel"],
+    datasets: [{
+      data: [
+        Number("{{ transport_total }}"),
+        Number("{{ electricity_total }}"),
+        Number("{{ water_total }}"),
+        Number("{{ plastic_total }}"),
+        Number("{{ waste_total }}"),
+        Number("{{ fuel_total }}")
+      ],
+      backgroundColor: [
+        "#4e79a7", "#e15759", "#f28e2b",
+        "#76b7b2", "#59a14f", "#edc949"
+      ]
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false
+  }
+});
+
+window.onload = function () {
+  var loader = document.getElementById("loader");
+  if (loader) loader.style.display = "none";
+};
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
