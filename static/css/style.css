@@ -1,0 +1,1350 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+/* ===========================
+   Login & Register Background
+=========================== */
+
+.register-page{
+    background:linear-gradient(rgba(238, 243, 239, 0.75),rgba(255,255,255,.75)),
+    url("../images/login_bg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+}
+
+/* ===========================
+   Login Card
+=========================== */
+
+.login-card,
+.register-card{
+    width:420px;
+    background:#f8faf8;
+    border-radius:20px;
+    padding:35px;
+    margin:auto;
+    margin-top:60px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.login-card h2,
+.register-card h2{
+    text-align:center;
+    font-weight:700;
+    color:#126b40;
+    margin-bottom:25px;
+}
+
+/* ===========================
+   Form Controls
+=========================== */
+
+.form-control{
+    border-radius:10px;
+    padding:12px;
+    border:1px solid #fdf9f9;
+}
+
+.form-control:focus{
+    border-color:#17a56b;
+    box-shadow:0 0 8px rgba(23,165,107,.25);
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn-success{
+    background:#149954;
+    border:none;
+    border-radius:10px;
+    padding:10px;
+    font-weight:600;
+}
+
+.btn-success:hover{
+    background:#0d7a43;
+}
+
+.btn-primary{
+    border-radius:10px;
+}
+
+.btn-dark{
+    border-radius:10px;
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:220px;
+
+    height:100vh;
+
+    background:linear-gradient(180deg,#063d25,#0c6d3f,#1fa95f);
+
+    color:white;
+
+    overflow-y:auto;
+
+    padding-top:15px;
+
+}
+
+.sidebar h3{
+    text-align:center;
+    margin:20px 0;
+    font-size:28px;
+    font-weight:700;
+}
+
+.sidebar hr{
+    border:1px solid rgba(255,255,255,.25);
+}
+
+.sidebar a{
+
+    display:block;
+
+    margin:8px 15px;
+
+    padding:14px 18px;
+
+    color:white;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.sidebar a.active{
+
+    background:white;
+
+    color:#198754;
+
+}
+
+/* ===========================
+   Main Content
+=========================== */
+
+.main-content{
+    margin-left:250px;
+    padding:30px;
+    flex:1;
+    background:transparent;
+    min-height:100vh;
+}
+
+.container-fluid{
+    padding:0;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+    background:rgba(255,255,255,.22);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:20px;
+
+    padding:18px 25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+
+/* ===========================
+   Dashboard Cards
+=========================== */
+
+.dashboard-card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding:20px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+}
+.card-carbon{
+background:#DFF7E2;
+}
+
+.card-category{
+background:#FFE5EC;
+}
+
+.card-eco{
+background:#E0F2FE;
+}
+
+.card-tree{
+background:#FFF7CC;
+}
+
+.card-record{
+background:#F3E8FF;
+}
+
+.card-average{
+background:#E8F5E9;
+}
+
+.card-status{
+background:#FFF3E0;
+}
+.dashboard-card{
+    color:#1f2937;
+}
+
+.dashboard-card h2,
+.dashboard-card h3,
+.dashboard-card h4,
+.dashboard-card h5,
+.dashboard-card h6,
+.dashboard-card p{
+    color:#1f2937;
+}
+
+.dashboard-card h2,
+.dashboard-card h6,
+.dashboard-card p{
+    color:rgb(245, 243, 243);
+}
+
+.dashboard-card h6{
+    color:#666;
+    font-size:15px;
+}
+
+.dashboard-card h2{
+    color:#0f7b4d;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.dashboard-card p{
+    color:#777;
+    margin-top:5px;
+}
+
+/* ===========================
+   General Cards
+=========================== */
+
+.card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:20px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+.card h4{
+    color:#126b40;
+    font-weight:700;
+}
+
+/* ===========================
+   Charts
+=========================== */
+
+canvas{
+    max-width:100%;
+}
+
+/* ===========================
+   Alerts
+=========================== */
+
+.alert{
+    border:none;
+    border-radius:12px;
+    font-weight:500;
+}
+/* =========================================
+   PART 2
+   Calculator • History • Reports • Goals
+========================================= */
+
+/* Calculator */
+
+.calculator-card{
+    background:#7caf7a;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.calculator-card h2{
+    color:#0d7b45;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+label{
+    font-weight:600;
+    color:#444;
+    margin-bottom:6px;
+}
+
+input,
+select{
+    border-radius:10px !important;
+    border:1px solid #5fa063 !important;
+    padding:10px !important;
+}
+
+input:focus,
+select:focus{
+    border-color:#0f9d58 !important;
+    box-shadow:0 0 10px rgba(15,157,88,.25) !important;
+}
+
+/* Result Box */
+
+.result-card{
+    background:#ffffff;
+    border-radius:18px;
+    text-align:center;
+    padding:30px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.result-card h1{
+    color:#138a4d;
+    font-weight:700;
+}
+
+.result-card h4{
+    color:#666;
+}
+
+/* History */
+
+.table{
+    background:rgb(203, 243, 158);
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.table thead{
+    background:#138a4d;
+    color:rgb(173, 211, 164);
+}
+
+.table thead th{
+    border:none;
+    text-align:center;
+}
+
+.table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.table tbody tr:hover{
+    background:#77c08f;
+}
+
+/* Reports */
+
+.report-card{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.report-card h4{
+    color:#0d7b45;
+    margin-bottom:20px;
+}
+
+/* Progress Bar */
+
+.progress{
+    height:22px;
+    border-radius:30px;
+    background:#e6e6e6;
+}
+
+.progress-bar{
+    background:linear-gradient(90deg,#0b8f4d,#32c27c);
+    font-weight:bold;
+}
+
+/* Goal Cards */
+
+.goal-card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.goal-card h3{
+    color:#138a4d;
+    font-weight:700;
+}
+
+.goal-card img{
+    width:90px;
+    margin-top:10px;
+}
+
+/* Status */
+
+.status-good{
+    color:#198754;
+    font-weight:bold;
+}
+
+.status-medium{
+    color:#ff9800;
+    font-weight:bold;
+}
+
+.status-high{
+    color:#dc3545;
+    font-weight:bold;
+}
+
+/* Download Button */
+
+.download-btn{
+    background:#138a4d;
+    color:white;
+    border-radius:12px;
+    padding:12px 22px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#0d6b3d;
+    color:white;
+}
+
+/* Charts */
+
+.chart-card{
+
+    height:420px;
+
+}
+
+.chart-card canvas{
+
+    width:100% !important;
+
+    height:320px !important;
+
+}
+/* AI Suggestion */
+
+.ai-box{
+    background:#f4fff7;
+    border-left:6px solid #138a4d;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.ai-box h5{
+    color:#138a4d;
+    font-weight:bold;
+}
+
+.ai-box p{
+    margin-bottom:8px;
+    color:#555;
+}
+
+/* Badges */
+
+.badge-green{
+    background:#138a4d;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+}
+
+.badge-orange{
+    background:#ff9800;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+}
+
+.badge-red{
+    background:#dc3545;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+}
+
+/* Cards Hover */
+
+.card:hover,
+.goal-card:hover,
+.report-card:hover,
+.calculator-card:hover{
+    transform:translateY(-5px);
+    transition:.3s;
+}
+
+/* Page Titles */
+
+.page-title{
+    color:#0d7b45;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.sidebar{
+    width:100%;
+    height:auto;
+    position:relative;
+}
+
+.dashboard-card{
+    background: rgba(255,255,255,0.12) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    border-radius: 20px;
+    color: white;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-6px);
+}
+
+.goal-card{
+    margin-bottom:20px;
+}
+
+.report-card{
+    margin-bottom:20px;
+}
+
+}
+/* =========================================
+   PART 3
+   Eco Tips • Leaderboard • Profile • About
+========================================= */
+
+/* Profile */
+
+.profile-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.profile-card img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:5px solid #16a34a;
+    margin-bottom:15px;
+}
+
+.profile-card h2{
+    color:#0f9d58;
+    font-weight:700;
+}
+
+.profile-card p{
+    color:#666;
+}
+
+/* Eco Tips */
+
+.tip-card{
+    background:white;
+    border-left:6px solid #16a34a;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.tip-card i{
+    color:#16a34a;
+    font-size:28px;
+    margin-right:10px;
+}
+
+.tip-card h5{
+    font-weight:700;
+    color:#138a4d;
+}
+
+/* Leaderboard */
+
+.rank-card{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.rank-card h5{
+    margin:0;
+    color:#138a4d;
+}
+
+.rank-score{
+    background:#16a34a;
+    color:white;
+    padding:8px 18px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+/* About */
+
+.about-card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.about-card h2{
+    color:#138a4d;
+    font-weight:700;
+}
+
+.about-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* Buttons */
+
+.btn-success{
+    background:#16a34a;
+    border:none;
+    border-radius:12px;
+}
+
+.btn-success:hover{
+    background:#138a4d;
+}
+
+.btn-primary{
+    border-radius:12px;
+}
+
+.btn-dark{
+    border-radius:12px;
+}
+
+/* Animations */
+
+.dashboard-card,
+.card,
+.goal-card,
+.report-card,
+.profile-card,
+.tip-card,
+.rank-card,
+.about-card{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#edf7ef;
+}
+
+::-webkit-scrollbar-thumb{
+background:#16a34a;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#138a4d;
+}
+
+/* Footer */
+
+  .footer{
+
+    margin-top:20px;
+
+    background:#043d22;
+
+    color:white;
+
+    text-align:center;
+
+    padding:18px;
+
+}
+
+/* Icons */
+
+.fa-solid,
+.bi{
+    margin-right:8px;
+}
+
+/* Hover Effects */
+
+.sidebar a:hover{
+    background:#16a34a;
+    color:white;
+    padding-left:18px;
+}
+
+.dashboard-card{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+    overflow:hidden;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-6px);
+
+}
+.rank-card:hover{
+    transform:scale(1.02);
+}
+
+.tip-card:hover{
+    transform:translateX(5px);
+}
+
+.profile-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.profile-card img{
+width:100px;
+height:100px;
+}
+
+.rank-card{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+.about-card{
+padding:20px;
+}
+
+.tip-card{
+padding:15px;
+}
+
+}
+/* Dark Mode */
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .navbar{
+    background:#1f1f1f !important;
+}
+
+.dark-mode .card{
+    background:#222;
+    color:white;
+}
+
+.dark-mode .dashboard-card{
+    background:#222;
+    color:white;
+}
+
+.dark-mode .sidebar{
+    background:#0b3d2e;
+}
+
+.dark-mode a{
+    color:white;
+}
+
+.dark-mode table{
+    color:white;
+}
+
+.dark-mode .btn-success{
+    background:#198754;
+}
+/* Login Background */
+.login-page{
+    background-image: url("../images/login.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.dashboard-page{
+    background: url("../images/dashboard.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height:100vh;
+}
+/* Calculator Background */
+.calculator-page{
+    background-image: url("../images/calculator.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Make the content readable */
+.calculator-page .card{
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+}
+
+/* ================= REPORTS PAGE BACKGROUND ================= */
+
+.reports-page{
+    background: url("../images/reports.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.reports-page .main-content{
+    background: transparent;
+}
+
+.reports-page .container-fluid{
+    background: transparent;
+}
+
+.reports-page .card,
+.reports-page .dashboard-card{
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.reports-page h1,
+.reports-page h2,
+.reports-page h3,
+.reports-page h4,
+.reports-page h5,
+.reports-page p{
+    color: #1f2937;
+}
+/* ================= HISTORY PAGE BACKGROUND ================= */
+
+.history-page{
+    background: url("../images/history.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.history-page .main-content{
+    background: transparent;
+}
+
+.history-page .container-fluid{
+    background: transparent;
+}
+
+.history-page .card,
+.history-page .dashboard-card,
+.history-page table{
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.history-page h1,
+.history-page h2,
+.history-page h3,
+.history-page h4,
+.history-page h5,
+.history-page p,
+.history-page th,
+.history-page td{
+    color: #1f2937;
+}
+/* ================= GOALS PAGE BACKGROUND ================= */
+
+.goals-page{
+    background: url("../images/goals.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.goals-page .main-content{
+    background: transparent;
+}
+
+.goals-page .container-fluid{
+    background: transparent;
+}
+
+.goals-page .card,
+.goals-page .dashboard-card{
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.goals-page h1,
+.goals-page h2,
+.goals-page h3,
+.goals-page h4,
+.goals-page h5,
+.goals-page p,
+.goals-page li{
+    color:#1f2937;
+}
+
+.goals-page .progress{
+    height:18px;
+    border-radius:10px;
+}
+/* ================= ECO TIPS PAGE BACKGROUND ================= */
+
+.eco-tips-page{
+    background: url("../images/eco_tips.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.eco-tips-page .main-content{
+    background: transparent;
+}
+
+.eco-tips-page .container-fluid{
+    background: transparent;
+}
+
+.eco-tips-page .card,
+.eco-tips-page .dashboard-card{
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.eco-tips-page h1,
+.eco-tips-page h2,
+.eco-tips-page h3,
+.eco-tips-page h4,
+.eco-tips-page h5,
+.eco-tips-page p,
+.eco-tips-page li{
+    color:#1f2937;
+}
+
+.eco-tips-page img{
+    border-radius:12px;
+}
+/* ================= LEADERBOARD PAGE BACKGROUND ================= */
+
+.leaderboard-page{
+    background: url("../images/leaderboard.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.leaderboard-page .main-content{
+    background: transparent;
+}
+
+.leaderboard-page .container-fluid{
+    background: transparent;
+}
+
+.leaderboard-page .card,
+.leaderboard-page .dashboard-card,
+.leaderboard-page table{
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.leaderboard-page h1,
+.leaderboard-page h2,
+.leaderboard-page h3,
+.leaderboard-page h4,
+.leaderboard-page h5,
+.leaderboard-page p,
+.leaderboard-page th,
+.leaderboard-page td{
+    color:#1f2937;
+}
+
+.leaderboard-page .btn{
+    border-radius: 10px;
+}
+/* ================= PROFILE PAGE BACKGROUND ================= */
+
+.profile-page{
+    background: url("../images/profile.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.profile-page .main-content{
+    background: transparent;
+}
+
+.profile-page .container-fluid{
+    background: transparent;
+}
+
+.profile-page .card,
+.profile-page .dashboard-card{
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.profile-page h1,
+.profile-page h2,
+.profile-page h3,
+.profile-page h4,
+.profile-page h5,
+.profile-page p,
+.profile-page label{
+    color:#1f2937;
+}
+
+.profile-page .form-control{
+    border-radius:10px;
+}
+
+.profile-page .btn{
+    border-radius:10px;
+}
+/* ================= ABOUT PAGE BACKGROUND ================= */
+
+.about-page{
+    background: url("../images/about.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.about-page .main-content{
+    background: transparent;
+}
+
+.about-page .container-fluid{
+    background: transparent;
+}
+
+.about-page .card,
+.about-page .dashboard-card{
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page h4,
+.about-page h5,
+.about-page p,
+.about-page li{
+    color:#1f2937;
+}
+
+.about-page .btn{
+    border-radius:10px;
+}
+/* Today's Carbon Footprint */
+.card-carbon{
+    background:#DFF7E2;
+    color:#166534;
+}
+
+/* Carbon Category */
+.card-category{
+    background:#FFE5EC;
+    color:#BE123C;
+}
+
+/* Eco Score */
+.card-eco{
+    background:#E0F2FE;
+    color:#0369A1;
+}
+
+/* Trees You Can Save */
+.card-tree{
+    background:#FFF7CC;
+    color:#B45309;
+}
+
+/* Total Records */
+.card-record{
+    background:#F3E8FF;
+    color:#7E22CE;
+}
+
+/* Average Carbon */
+.card-average{
+    background:#E8F5E9;
+    color:#2E7D32;
+}
+
+/* AI Status */
+.card-status{
+    background:#FFF3E0;
+    color:#EF6C00;
+}
+
+.dashboard-card h2,
+.dashboard-card h3,
+.dashboard-card h4,
+.dashboard-card h5,
+.dashboard-card h6,
+.dashboard-card p{
+    margin:0;
+}
+.card{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-radius:22px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+
+}
+.dashboard header{
+    background: rgba(255,255,255,0.12) !important;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+}
+/* ================= DARK TEXT ================= */
+
+.dashboard-card,
+.card{
+    color:#111827 !important;
+}
+
+.dashboard-card h1,
+.dashboard-card h2,
+.dashboard-card h3,
+.dashboard-card h4,
+.dashboard-card h5,
+.dashboard-card h6,
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6{
+    color:#111827 !important;
+    font-weight:700;
+}
+
+.dashboard-card p,
+.dashboard-card span,
+.dashboard-card label,
+.card p,
+.card span,
+.card label{
+    color:#374151 !important;
+    font-weight:600;
+}
+
+/* Dashboard Title */
+.main-content h1,
+.main-content h2{
+    color:#111827 !important;
+    font-weight:800;
+}
+
+/* Carbon Category */
+.text-danger{
+    color:#b91c1c !important;
+    font-weight:800;
+}
+
+/* Eco Score */
+.text-success{
+    color:#166534 !important;
+    font-weight:700;
+}
+
+/* AI Assistant */
+.card-title{
+    color:#111827 !important;
+    font-weight:700;
+}
+
+/* Buttons remain white */
+.btn{
+    color:white !important;
+    font-weight:600;
+}
+/* ===== Dashboard Header ===== */
+
+.dashboard-header{
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:22px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+}
+.dashboard-header h2{
+    color:#111827;
+    font-weight:800;
+    margin:0;
+}
+.action-card .btn{
+
+    width:100%;
+
+    margin-bottom:18px;
+
+    padding:15px;
+
+    font-size:18px;
+
+    border-radius:12px;
+
+}
+.ai-card{
+
+    padding:25px;
+
+}
+
+.ai-card input{
+
+    height:50px;
+
+}
